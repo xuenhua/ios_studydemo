@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJW-OA-N74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1466" y="38"/>
+            <point key="canvasLocation" x="-1628" y="59"/>
         </scene>
         <!--图片浏览-->
         <scene sceneID="aD7-f9-86M">
@@ -438,6 +438,6 @@
         <image name="AlbumLikeSmall_Golden" width="18" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zdr-af-Nou"/>
+        <segue reference="JR3-F2-5PV"/>
     </inferredMetricsTieBreakers>
 </document>

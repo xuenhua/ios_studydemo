@@ -27,7 +27,6 @@ func  getPicturesArray(name:[String],type:[String],imageName:[String],country:[S
     }
     return pictures
 }
-@available(*,deprecated)
 func  getPicturesArray2(dataset:MyDataSet) -> [MyPicture]{
     let pic_count=dataset.name.count
     var pictures=[MyPicture]()
