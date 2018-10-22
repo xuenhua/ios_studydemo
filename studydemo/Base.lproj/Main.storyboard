@@ -57,7 +57,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="TableViewDemo"/>
                                 <connections>
-                                    <segue destination="UZR-aW-CSZ" kind="show" id="teQ-fe-mvX"/>
+                                    <segue destination="UZR-aW-CSZ" kind="show" id="kKY-CE-01x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -437,6 +437,6 @@
         <image name="AlbumLikeSmall_Golden" width="18" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JR3-F2-5PV"/>
+        <segue reference="Zdr-af-Nou"/>
     </inferredMetricsTieBreakers>
 </document>
