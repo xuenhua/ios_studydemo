@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource
+{
     
     var students=["朋友圈","闹钟","图片","阅读"]
     var imagename=["Action_Moments","Action_Remind","Action_SaveAsPicture","Action_WeRead"]
@@ -29,6 +30,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //返回时不显示导航栏
+        navigationController?.isNavigationBarHidden=true
+        //不使用父级的大标题
+        //navigationItem.largeTitleDisplayMode = .never
     }
 
 
