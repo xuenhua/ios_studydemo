@@ -10,7 +10,7 @@ import UIKit
 
 class MyCellDetailViewController: UIViewController {
 
-    var imageName = "" 
+    var imageName = ""
     @IBOutlet weak var detailImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
