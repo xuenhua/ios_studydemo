@@ -42,6 +42,11 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       //设置标题颜色，页面设置有bug，代码中处理
+navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: "MyColor")]
+        
+        //设置小标题颜色
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: "MyColor")]
         //加载数据源
         let mydata = MyDataSet()
         pictures=getPicturesArray2(dataset: mydata)
