@@ -18,6 +18,7 @@ class MyTableViewControllerForDetail: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       //导航栏隐藏背景
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage=UIImage()
         detailImageView2.image = UIImage(named: mypicture.imageName)
