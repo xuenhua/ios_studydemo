@@ -21,6 +21,8 @@ class MyTableViewControllerForDetail: UITableViewController {
        //导航栏隐藏背景
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage=UIImage()
+        navigationController?.navigationBar.tintColor=UIColor(named: "MyColor")
+        
         detailImageView2.image = UIImage(named: mypicture.imageName)
         
         
