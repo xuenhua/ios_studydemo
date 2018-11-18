@@ -11,7 +11,7 @@ import UIKit
 class MyTableViewControllerForDetail: UITableViewController {
     var imageName = ""
     var mypicture : MyPicture!
-    
+    var headerView : UIView!
     
     @IBOutlet weak var detailImageView2: UIImageView!
     
@@ -29,6 +29,12 @@ class MyTableViewControllerForDetail: UITableViewController {
         print("detailImageView2",mypicture.imageName)
         //不使用父级的大标题
        navigationItem.largeTitleDisplayMode = .never
+        
+        headerView=tableView.tableHeaderView!
+        tableView.tableHeaderView=nil
+        tableView.addSubview(headerView)
+        tableView.contentInset=UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
+        
         
     }
 
@@ -71,8 +77,14 @@ class MyTableViewControllerForDetail: UITableViewController {
         
         return cell
     }
- 
-
+ //滚动动态调整图片效果
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("滚动位移值：",scrollView.contentOffset.y)
+        let offset=scrollView.contentOffset.y
+        print(-offset)
+       
+        headerView.frame = CGRect(x: 0, y: offset, width: tableView.bounds.width, height: -offset)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -117,5 +129,14 @@ class MyTableViewControllerForDetail: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBOutlet weak var ratingButton: UIButton!
+    @IBAction func backDetail(segue:UIStoryboardSegue){
+        if let rating = segue.identifier{
+            mypicture.rating = rating
+            ratingButton.setTitle("打分：\(rating)分", for: .normal)
+            
+        }
+    }
 
 }
