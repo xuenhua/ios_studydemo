@@ -43,7 +43,7 @@ class TableViewController: UITableViewController {
         let  coder = JSONEncoder()
         do{
             let data = try coder.encode(pictures)
-            let saveUrl=URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("pictures.json")
+            let saveUrl=URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("tmp/pictures.json")
             try data.write(to: saveUrl)
             print("保存地址是",saveUrl)
             
@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
     ///load json
     func loadJson(){
         let coder = JSONDecoder()
-        let url = Bundle.url(forResource: "pictures", withExtension: "json", subdirectory: "", in: URL(fileURLWithPath: NSHomeDirectory()))!
+        let url = Bundle.url(forResource: "pictures", withExtension: "json", subdirectory: "tmp", in: URL(fileURLWithPath: NSHomeDirectory()))!
         do{
             let data = try Data(contentsOf: url)
             pictures = try coder.decode([MyPicture].self, from: data)
@@ -84,7 +84,7 @@ navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStri
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         //JSON
-        //save2JSON()
+        save2JSON()
         loadJson()
         
         
