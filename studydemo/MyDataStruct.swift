@@ -6,7 +6,7 @@
 //  Copyright © 2018年 XuEnhua. All rights reserved.
 //
 
-struct MyPicture {
+struct MyPicture : Codable{
     var name = ""
     var type = ""
     var imageName = ""

@@ -38,7 +38,33 @@ class TableViewController: UITableViewController {
         cell.favstate = pictures[indexPath!.row].favstate
         
     }
-    
+    ///对象转json，并保存
+    func save2JSON(){
+        let  coder = JSONEncoder()
+        do{
+            let data = try coder.encode(pictures)
+            let saveUrl=URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("pictures.json")
+            try data.write(to: saveUrl)
+            print("保存地址是",saveUrl)
+            
+        }catch{
+            print("编码错误：",error)
+        }
+        
+    }
+    ///load json
+    func loadJson(){
+        let coder = JSONDecoder()
+        let url = Bundle.url(forResource: "pictures", withExtension: "json", subdirectory: "", in: URL(fileURLWithPath: NSHomeDirectory()))!
+        do{
+            let data = try Data(contentsOf: url)
+            pictures = try coder.decode([MyPicture].self, from: data)
+            
+        }catch{
+            print ("解码报错",error)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +82,12 @@ navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStri
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //JSON
+        //save2JSON()
+        loadJson()
+        
+        
     }
 
     // MARK: - Table view data source

@@ -21,6 +21,7 @@
 		5B000216217CAE7500AFDEC8 /* MyTableViewControllerForDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B000215217CAE7500AFDEC8 /* MyTableViewControllerForDetail.swift */; };
 		5B000218217CCBC500AFDEC8 /* MyTableViewCellDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B000217217CCBC500AFDEC8 /* MyTableViewCellDetail.swift */; };
 		5BD6543A21A183EC005C8080 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6543921A183EC005C8080 /* RateViewController.swift */; };
+		5BF8430B21A31C9E00273640 /* pictures.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BF8430A21A31C9E00273640 /* pictures.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5B000215217CAE7500AFDEC8 /* MyTableViewControllerForDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewControllerForDetail.swift; sourceTree = "<group>"; };
 		5B000217217CCBC500AFDEC8 /* MyTableViewCellDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCellDetail.swift; sourceTree = "<group>"; };
 		5BD6543921A183EC005C8080 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		5BF8430A21A31C9E00273640 /* pictures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pictures.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				5B0001F5217ADC3600AFDEC8 /* Main.storyboard */,
 				5BD6543921A183EC005C8080 /* RateViewController.swift */,
 				5B00020D217C62FD00AFDEC8 /* MyCellDetailViewController.swift */,
+				5BF8430A21A31C9E00273640 /* pictures.json */,
 				5B000215217CAE7500AFDEC8 /* MyTableViewControllerForDetail.swift */,
 				5B000217217CCBC500AFDEC8 /* MyTableViewCellDetail.swift */,
 				5B000207217B712300AFDEC8 /* TableViewController.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF8430B21A31C9E00273640 /* pictures.json in Resources */,
 				5B0001FC217ADC3800AFDEC8 /* LaunchScreen.storyboard in Resources */,
 				5B000204217ADF2D00AFDEC8 /* Assets.xcassets in Resources */,
 				5B0001F7217ADC3600AFDEC8 /* Main.storyboard in Resources */,
